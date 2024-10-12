@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="role_items">
+        <item>Guru</item>
+        <item>Admin</item>
+    </string-array>
+    <string-array name="video_list_items">
+        <item>@drawable/image_card_video_1</item>
+        <item>@drawable/image_card_video_2</item>
+    </string-array>
+    <string-array name="ebook_list_items">
+        <item>@drawable/image_card_ebook_1</item>
+        <item>@drawable/image_card_ebook_2</item>
+    </string-array>
+    <string-array name="tentang_sekolah_deskripsi">
+        <item>
+            KesSekolah adalah platform yang dapat digunakan oleh guru di sekolah dan petugas UKS untuk membantu kegiatan profesional sehari-hari. Platform ini memungkinkan mereka untuk memberikan atau mendapatkan informasi ilmiah, mengembangkan keahlian, serta berkonsultasi dengan ahli dan berkomunikasi di Kota Serang. Dengan demikian, KesSekolah dapat meningkatkan pelayanan UKS dalam memberikan pengetahuan kesehatan kepada siswa.
+        </item>
+        <item>
+            Dengan menggunakan basis mobile, KesSekolah menawarkan pembelajaran yang fleksibel. Hal ini membuat proses pembelajaran lebih mudah diakses di mana saja dan kapan saja oleh guru, siswa, dan petugas UKS. Ini menjadi inovasi dalam teknologi pendidikan dengan mengembangkan sistem informasi terkait UKS sebagai upaya menurunkan angka kesakitan pada siswa sejak dini serta mendukung program pemerintah.
+        </item>
+    </string-array>
+    <string-array name="onboarding_deskripsi">
+        <item>
+            Selamat Datang!
+        </item>
+        <item>
+            KesSekolah adalah pembelajaran kesehatan yang bisa diakses kapan pun dan di mana pun!
+        </item>
+    </string-array>
+</resources>

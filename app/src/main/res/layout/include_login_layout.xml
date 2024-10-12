@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Email"
+        android:textSize="16sp"
+        android:paddingStart="26sp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/accent1"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        android:paddingHorizontal="24dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        android:layout_marginTop="8dp">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_layout"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:inputType="textEmailAddress"
+            android:hint="Masukkan Email"
+            android:textColorHint="@color/accent1"
+            android:textColor="@color/accent1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/usernameError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_regular"
+        android:text="@string/username_empty"
+        android:textColor="@color/danger500"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:alpha="0"
+        android:paddingHorizontal="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Password"
+        android:textSize="16sp"
+        android:textColor="@color/accent1"
+        android:paddingStart="26sp"
+        android:layout_marginTop="4dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/accent1"
+        android:paddingHorizontal="24dp">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textPassword"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Masukan Password"
+            android:textColorHint="@color/accent1"
+            android:textColor="@color/accent1"
+            android:background="@drawable/input_layout"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_regular"
+        android:text="@string/password_wrong"
+        android:textColor="@color/danger500"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:alpha="0"
+        android:paddingHorizontal="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:paddingHorizontal="24dp">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkBoxRemember"
+            style="@style/Theme.IniDesakuBeta.CheckBoxText.Medium12.500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ingat_saya"
+            android:textSize="16sp"
+            android:textColor="@color/accent1"
+            android:fontFamily="@font/fredoka_medium" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnForgotPassword"
+            style="@style/Theme.IniDesakuBeta.ButtonText.Mediumm12.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lupa Password?"
+            android:textColor="@color/primary3"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        style="@style/Theme.IniDesakuBeta.Button."
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        app:cornerRadius="5dp"
+        android:backgroundTint="@color/primary3"
+        app:strokeColor="@color/light3"
+        app:strokeWidth="1dp"
+        android:textColor="@color/accent1"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        android:layout_marginHorizontal="24dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="24dp">
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:background="@color/font200"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/atau"
+            android:fontFamily="@font/fredoka_regular"
+            android:textColor="@color/light4"
+            android:textSize="16sp"
+            android:textAlignment="center" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:layout_weight="2"
+            android:background="@color/font200"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDaftar"
+        style="@style/Theme.IniDesakuBeta.Button."
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/daftar"
+        android:textAllCaps="false"
+        app:cornerRadius="5dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/light2"
+        app:strokeColor="@color/light3"
+        app:strokeWidth="1dp"
+        android:textColor="@color/light4"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="24dp"/>
+
+</LinearLayout>

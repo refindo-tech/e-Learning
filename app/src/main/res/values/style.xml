@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.MaterialComponents.TitleNavbar" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/fredoka_medium</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headlinee1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/primary3</item>
+        <item name="android:fontFamily">@font/fredoka_bold</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.NavbarTitlee" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/primary3</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline2" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline3" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/light2</item>
+        <item name="android:fontFamily">@font/fredoka_bold</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline4" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?attr/colorSurface</item>
+        <item name="android:fontFamily">@font/fredoka_bold</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headlinee4" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/primary3</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline4Black" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/primary3</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextBold.Headline6" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_bold</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline6" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headlinee6" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary3</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline6Primary" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary3</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline5" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        @@ -31,12 +55,24 @@
+        <item name="android:fontFamily">@font/fredoka_regular</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextBold.Subtitle2Black" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_regular</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Subtitle1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_regular</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Subtitle1Black" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_regular</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextBold.Subtitle1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        @@ -138,6 +174,11 @@
+        <item name="cornerSize">8%</item>
+    </style>
+
+    <style name="customImageViewCircle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="customImageView8dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8%</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.Medium11.500" parent="">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/fredoka_regular</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.Mediumm11.500" parent="">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/fredoka_bold</item>
+        <item name="android:textColor">@color/light2</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.Medium12.500" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/fredoka_bold</item>
+        <item name="android:textColor">@color/light2</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.Regular14.400" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_regular</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.CheckBoxText.Medium12.500" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Button." parent="Widget.Material3.Button">
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.Regular12.400" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_regular</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.Medium22.500" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.Regular16.400" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.ButtonText.Medium12.500" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.ButtonText.Mediumm12.500" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+
+    <style name="Theme.IniDesakuBeta.TextView.Medium14.500" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/fredoka_medium</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+</resources>

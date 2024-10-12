@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvJudulReferensi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="24dp"
+        android:text="@string/tv_referensi_title"
+        android:theme="@style/Theme.IniDesakuBeta.Text.Headline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutJudulReferensi"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="@string/masukan_judul_materi"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@id/tvJudulReferensi"
+        app:layout_constraintStart_toStartOf="@id/tvJudulReferensi"
+        app:layout_constraintTop_toBottomOf="@id/tvJudulReferensi">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textJudulMateri"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvTahun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tahun"
+        android:theme="@style/Theme.IniDesakuBeta.Text.Headline6"
+        app:layout_constraintEnd_toEndOf="@id/layoutJudulReferensi"
+        app:layout_constraintStart_toStartOf="@id/layoutJudulReferensi"
+        app:layout_constraintTop_toBottomOf="@id/layoutJudulReferensi" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutTahun"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="@string/masukan_tahun"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@id/tvTahun"
+        app:layout_constraintStart_toStartOf="@id/tvTahun"
+        app:layout_constraintTop_toBottomOf="@id/tvTahun">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textTahun"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvFileReferensi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Materi (.pdf/.png)"
+        android:theme="@style/Theme.IniDesakuBeta.Text.Headline6"
+        app:layout_constraintEnd_toEndOf="@id/layoutTahun"
+        app:layout_constraintStart_toStartOf="@id/layoutTahun"
+        app:layout_constraintTop_toBottomOf="@id/layoutTahun" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddFile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Klik untuk tambah materi E-Book"
+        app:layout_constraintEnd_toEndOf="@id/tvFileReferensi"
+        app:layout_constraintStart_toStartOf="@id/tvFileReferensi"
+        app:layout_constraintTop_toBottomOf="@id/tvFileReferensi" />
+
+    <TextView
+        android:id="@+id/tvPilihIlustrasi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pilih Ilustrasi"
+        android:theme="@style/Theme.IniDesakuBeta.Text.Headline6"
+        app:layout_constraintEnd_toEndOf="@id/btnAddFile"
+        app:layout_constraintStart_toStartOf="@id/btnAddFile"
+        app:layout_constraintTop_toBottomOf="@id/btnAddFile" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIlus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:foregroundGravity="center"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/tvPilihIlustrasi"
+        app:layout_constraintStart_toStartOf="@id/tvPilihIlustrasi"
+        app:layout_constraintTop_toBottomOf="@id/tvPilihIlustrasi"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_banner_materi_picker" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

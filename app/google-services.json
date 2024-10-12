@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1042229703750",
+    "firebase_url": "https://kesehatansekolahuks-8df94-default-rtdb.firebaseio.com",
+    "project_id": "kesehatansekolahuks-8df94",
+    "storage_bucket": "kesehatansekolahuks-8df94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042229703750:android:710e3381815c0aed238647",
+        "android_client_info": {
+          "package_name": "com.example.kessekolah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042229703750-vitbfpbtbegav9m5p0qpku6ou4l58car.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kessekolah",
+            "certificate_hash": "0ac178eb2b01477f41053eace0cec5f30f810aaf"
+          }
+        },
+        {
+          "client_id": "1042229703750-0q2p36b51fu1otjcbqvmae9b6bheadcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGb6_4JLIiEEqBbaIS-QHh1FbA7PZfSzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042229703750-0q2p36b51fu1otjcbqvmae9b6bheadcn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

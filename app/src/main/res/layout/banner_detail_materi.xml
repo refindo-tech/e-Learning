@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center|center_horizontal"
+    android:elevation="8dp"
+    app:cardUseCompatPadding="false"
+    app:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backColorBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        >
+
+        <TextView
+            android:id="@+id/textTitle"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="16dp"
+            android:paddingRight="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ilusBanner"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/ilusBanner"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="28dp"
+            android:padding="4dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ilus_banner_3"
+            />
+
+        <TextView
+            android:id="@+id/textNews"
+            style="@style/Theme.IniDesakuBeta.Text.Headline3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Materi Baru\nSetiap Hari!"
+            android:textAlignment="textStart"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:maxLines="3"
+            app:layout_constraintTop_toTopOf="@id/textTitle"
+            app:layout_constraintStart_toEndOf="@id/ilusBanner"
+            app:layout_constraintBottom_toBottomOf="@id/ilusBanner"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

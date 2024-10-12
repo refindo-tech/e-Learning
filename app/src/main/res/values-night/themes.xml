@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KesSekolah" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryVarian3</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant_dark</item>
+        <item name="colorOnPrimary">@color/color_on_primary_dark</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_secondary_dark</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant_dark</item>
+        <item name="colorOnSecondary">@color/color_on_secondary_dark</item>
+
+        <!-- Background and text colors for light mode. -->
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white_2</item>
+    </style>
+</resources>

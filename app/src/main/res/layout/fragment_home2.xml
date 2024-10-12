@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.core.beranda.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textHi"
+            android:theme="@style/Theme.IniDesakuBeta.TextBold.Subtitle2Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSearch"
+            android:text="Hi"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:theme="@style/Theme.IniDesakuBeta.Text.Headlinee4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dummt_name"
+            app:layout_constraintTop_toBottomOf="@id/textHi"
+            app:layout_constraintStart_toStartOf="@id/textHi"
+            app:layout_constraintEnd_toStartOf="@id/btnSearch"/>
+
+        <Button
+            android:id="@+id/btnSearch"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@id/textHi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:icon="@drawable/baseline_search_24"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/banner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvUsername"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/secondary_colors">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    style="@style/Theme.IniDesakuBeta.Text.Headlinee6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/ilusBanner"
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="-18dp"
+                    app:layout_constraintStart_toStartOf="@id/textTitle"
+                    app:layout_constraintTop_toBottomOf="@id/textTitle"
+                    app:layout_constraintEnd_toStartOf="@id/textNews"
+                    android:src="@drawable/ilus_banner"
+                    android:contentDescription="@string/image_preview"
+                    />
+
+                <TextView
+                    android:id="@+id/textNews"
+                    style="@style/Theme.IniDesakuBeta.Text.Headlinee1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-32dp"
+                    android:layout_marginTop="-12dp"
+                    android:text="Materi Baru\nSetiap Hari!"
+                    app:layout_constraintTop_toTopOf="@id/textTitle"
+                    app:layout_constraintStart_toEndOf="@id/ilusBanner"
+                    app:layout_constraintBottom_toBottomOf="@id/ilusBanner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvButtonCore"
+            android:paddingStart="24dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/banner"
+            app:layout_constraintStart_toStartOf="@id/banner"
+            app:layout_constraintEnd_toEndOf="@id/banner"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_button_home_features"
+            tools:itemCount="2"
+            />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerMateri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="@id/rvButtonCore"
+            app:layout_constraintTop_toBottomOf="@id/rvButtonCore"
+            app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_banner_materi_home_shimmer"/>
+            <include layout="@layout/item_banner_materi_home_shimmer"/>
+            <include layout="@layout/item_banner_materi_home_shimmer"/>
+        </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutBannerMateri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvButtonCore"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMateri"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/materi"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Headline4Black"
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/imgDataEmpty"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:visibility="gone"
+                android:layout_gravity="start"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/no_data" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBannerMateri"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center_horizontal"
+                tools:listitem="@layout/item_banner_materi"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutBannerVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutBannerMateri"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvVideo"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Headline4Black"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBannerVideo"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center_horizontal"
+                tools:listitem="@layout/item_banner_materi"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutBannerEbook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutBannerVideo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPengobatanTradisional"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengobatan Tradisional"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Headline4Black"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBannerPengobatanTradisional"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center_horizontal"
+                tools:listitem="@layout/item_banner_materi"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

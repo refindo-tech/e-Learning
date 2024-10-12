@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/materi_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    card_view:cardCornerRadius="2dp" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="24dp">
+
+        <ImageView
+            android:id="@+id/iv_item_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary3"
+            android:textSize="14sp"
+            android:paddingEnd="14dp"
+            android:fontFamily="@font/fredoka_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_item_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_category"
+            tools:text="@string/materi_title" />
+
+        <TextView
+            android:id="@+id/tv_item_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular12.400"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_item_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_title"
+            app:layout_constraintBottom_toTopOf="@id/iv_time"
+            tools:text="@string/materi_category" />
+
+        <ImageView
+            android:id="@+id/iv_time"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/tv_item_category"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_clock"/>
+
+        <TextView
+            android:id="@+id/tv_item_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light4"
+            android:textSize="12sp"
+            android:fontFamily="@font/fredoka_medium"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_time"
+            app:layout_constraintEnd_toEndOf="@id/tv_item_category"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_category"
+            tools:text="@string/materi_date" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

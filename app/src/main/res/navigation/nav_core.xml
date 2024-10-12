@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_core"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.kessekolah.ui.core.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_tentangSekolahFragment"
+            app:destination="@id/tentangSekolahFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_noServiceFragment"
+            app:destination="@id/noServiceFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.kessekolah.ui.core.beranda.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+
+        <action
+            android:id="@+id/action_homeFragment2_to_listMateriFragment"
+            app:destination="@id/listMateriFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment2_to_addMateriFragment"
+            app:destination="@id/addMateriFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment2_to_noServiceFragment"
+            app:destination="@id/noServiceFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment2_to_flipBookTestFragment"
+            app:destination="@id/flipBookTestFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment2_to_searchMateriFragment"
+            app:destination="@id/searchMateriFragment" />
+
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.MateriData" />
+        <action
+            android:id="@+id/action_homeFragment2_to_listVideoFragment"
+            app:destination="@id/listVideoFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_listReferensiFragment"
+            app:destination="@id/listReferensiFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_listQuestionsFragment"
+            app:destination="@id/listQuestionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listMateriFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.materi.listMateri.ListMateriFragment"
+        android:label="fragment_list_materi"
+        tools:layout="@layout/fragment_list_materi" >
+        <action
+            android:id="@+id/action_listMateriFragment_to_addMateriFragment"
+            app:destination="@id/addMateriFragment" />
+        <action
+            android:id="@+id/action_listMateriFragment_to_editMateriFragment"
+            app:destination="@id/editMateriFragment" />
+        <action
+            android:id="@+id/action_listMateriFragment_to_flipBookTestFragment"
+            app:destination="@id/flipBookTestFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.MateriData" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookMarkFragment"
+        android:name="com.example.kessekolah.ui.core.bookmark.BookMarkFragment"
+        android:label="fragment_book_mark"
+        tools:layout="@layout/fragment_book_mark">
+
+        <action
+            android:id="@+id/action_bookMarkFragment_to_flipBookTestFragment"
+            app:destination="@id/flipBookTestFragment" />
+
+        <action
+            android:id="@+id/action_bookMarkFragment_to_searchFragment"
+            app:destination="@id/searchMateriFragment" />
+
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.MateriData" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMateriFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.materi.addMateri.AddMateriFragment"
+        android:label="fragment_add_materi"
+        tools:layout="@layout/fragment_add_materi" />
+    <fragment
+        android:id="@+id/editMateriFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.materi.editMateri.EditMateriFragment"
+        android:label="fragment_edit_materi"
+        tools:layout="@layout/fragment_edit_materi" >
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.MateriData" />
+    </fragment>
+    <fragment
+        android:id="@+id/flipBookTestFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.materi.detailMateri.FlipBookTestFragment"
+        android:label="fragment_flip_book_test"
+        tools:layout="@layout/fragment_flip_book_test" >
+
+        <argument
+            android:name="materi"
+            app:argType="com.example.kessekolah.data.database.MateriData" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.kessekolah.ui.core.profile.editProfile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/tentangSekolahFragment"
+        android:name="com.example.kessekolah.ui.about.TentangSekolahFragment"
+        android:label="fragment_tentang_sekolah"
+        tools:layout="@layout/fragment_tentang_sekolah">
+
+        <action
+            android:id="@+id/action_tentangSekolahFragment_to_profilFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.kessekolah.ui.sign.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login"/>
+
+    <fragment
+        android:id="@+id/noServiceFragment"
+        android:name="com.example.kessekolah.ui.NoServiceFragment"
+        android:label="fragment_no_service"
+        tools:layout="@layout/fragment_no_service"/>
+
+    <fragment
+        android:id="@+id/searchMateriFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.materi.searchMateri.SearchMateriFragment"
+        android:label="fragment_search_materi"
+        tools:layout="@layout/fragment_search_materi" >
+        <action
+            android:id="@+id/action_searchMateriFragment_to_flipBookTestFragment"
+            app:destination="@id/flipBookTestFragment" />
+        <action
+            android:id="@+id/action_searchMateriFragment_to_editMateriFragment"
+            app:destination="@id/editMateriFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listVideoFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.video.listVideo.ListVideoFragment"
+        android:label="fragment_list_video"
+        tools:layout="@layout/fragment_list_video" >
+        <action
+            android:id="@+id/action_listVideoFragment_to_addVideoFragment"
+            app:destination="@id/addVideoFragment" />
+        <action
+            android:id="@+id/action_listVideoFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.VideoList"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addVideoFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.video.addVideo.AddVideoFragment"
+        android:label="fragment_add_video"
+        tools:layout="@layout/fragment_add_video" >
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.VideoList"
+            app:nullable="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.video.detailVideo.VideoPlayerFragment"
+        android:label="VideoPlayerFragment">
+        <argument
+            android:name="video"
+            app:argType="com.example.kessekolah.data.database.VideoList" />
+    </fragment>
+    <fragment
+        android:id="@+id/listReferensiFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.referensi.listReferensi.ListReferensiFragment"
+        android:label="ListReferensiFragment" >
+        <action
+            android:id="@+id/action_listReferensiFragment_to_addReferensiFragment"
+            app:destination="@id/addReferensiFragment" />
+        <action
+            android:id="@+id/action_listReferensiFragment_to_editReferensiFragment"
+            app:destination="@id/editReferensiFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.MateriData" />
+        <action
+            android:id="@+id/action_listReferensiFragment_to_detailReferensiFragment"
+            app:destination="@id/detailReferensiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReferensiFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.referensi.addReferensi.AddReferensiFragment"
+        android:label="AddReferensiFragment" />
+    <fragment
+        android:id="@+id/editReferensiFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.referensi.editReferensi.EditReferensiFragment"
+        android:label="EditReferensiFragment">
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.MateriData" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailReferensiFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.referensi.detailReferensi.DetailReferensiFragment"
+        android:label="DetailReferensiFragment">
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.MateriData" />
+    </fragment>
+    <fragment
+        android:id="@+id/listQuestionsFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.forum.listQuestions.ListQuestionsFragment"
+        android:label="ListQuestionsFragment" >
+        <action
+            android:id="@+id/action_listQuestionsFragment_to_addQuestionFragment"
+            app:destination="@id/addQuestionFragment" />
+        <action
+            android:id="@+id/action_listQuestionsFragment_to_detailQuestionFragment"
+            app:destination="@id/detailQuestionFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.PostConsultation" />
+    </fragment>
+    <fragment
+        android:id="@+id/addQuestionFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.forum.addQuestion.AddQuestionFragment"
+        android:label="fragment_add_question"
+        tools:layout="@layout/fragment_add_question" />
+    <fragment
+        android:id="@+id/detailQuestionFragment"
+        android:name="com.example.kessekolah.ui.core.beranda.forum.detailQuestion.DetailQuestionFragment"
+        android:label="fragment_detail_question"
+        tools:layout="@layout/fragment_detail_question">
+        <argument
+            android:name="data"
+            app:argType="com.example.kessekolah.data.database.PostConsultation" />
+    </fragment>
+</navigation>

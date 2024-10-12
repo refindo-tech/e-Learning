@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="black30">#4D000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#D0D5DD</color>
+    <color name="primary200">#C6ECCC</color>
+    <color name="primary400">#65C375</color>
+    <color name="primary500">#40A752</color>
+    <color name="primary600">#308940</color>
+    <color name="font700">#464C5E</color>
+    <color name="font600">#565E73</color>
+    <color name="font500">#667085</color>
+    <color name="font400">#8A94A6</color>
+    <color name="font300">#B3B9C6</color>
+    <color name="font200">#D7DAE0</color>
+    <color name="font100">#EDEEF1</color>
+    <color name="font50">#F6F7F9</color>
+    <color name="disabled_text_button">#CBE0FFFF</color>
+    <color name="signup_description">#797979</color>
+    <color name="danger50">#FFF3F1</color>
+    <color name="danger500">#FF452C</color>
+    <color name="primary50">#F2FBF3</color>
+    <color name="primary100">#E2F6E5</color>
+    <color name="red">#eb3434</color>
+    <color name="blue">#2E95FF</color>
+    <color name="rule_bantuan">#8A94A6</color>
+
+    <!--KessekolahApp-->
+    <color name="light2">#F6F7FC</color>
+    <color name="light3">#E5E5E5</color>
+    <color name="light4">#707070</color>
+    <color name="accent1">#181818</color>
+    <color name="primary3">#FF6500</color>
+    <color name="primaryVarian3">#FB8D45</color>
+    <color name="secondary_colors">#FDCE06</color>
+
+    <!--    Light (Primary) -->
+    <color name="color_primary_light">#FF6500</color>
+    <color name="color_primary_variant_light">#FB8D45</color>
+    <color name="color_on_primary_light">#FDCE06</color>
+
+    <!--    Light (Brand Color) -->
+    <color name="color_secondary_light">#FDCE06</color>
+    <color name="color_secondary_variant_light">#FDCE06</color>
+    <color name="color_on_secondary_light">#FDCE06</color>
+
+    <!--    Dark (Primary) -->
+    <color name="color_primary_dark">#121212</color>
+    <color name="color_primary_variant_dark">#070A10</color>
+    <color name="color_on_primary_dark">#FB8D45</color>
+
+    <!--    Dark (Brand Color) -->
+    <color name="color_secondary_dark">#FB8D45</color>
+    <color name="color_secondary_variant_dark">#FDCE06</color>
+    <color name="color_on_secondary_dark">#332940</color>
+
+    <!--    Background colors -->
+    <color name="background_dark">#121212</color>
+    <color name="background_light">#FFFFFF</color>
+
+    <!--    Text colors -->
+    <color name="white_2">#FAFAFA</color>
+    <color name="black_2">#1A1A1A</color>
+
+    <!--   Icon Tint color -->
+    <color name="purple_500">#FF6500</color>
+</resources>

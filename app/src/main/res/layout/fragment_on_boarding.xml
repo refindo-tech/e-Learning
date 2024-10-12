@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_colors"
+    tools:context=".ui.onBoarding.OnBoardingFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="98dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/onBoardingLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_app" />
+
+        <TextView
+            android:id="@+id/onBoardingHeader1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:lineHeight="30sp"
+            android:text="KesSekolah"
+            android:textColor="@color/primary3"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/onBoardingHeader2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:lineHeight="17sp"
+            android:text="Edukasi Kesehatan Untuk Sekolah"
+            android:textColor="@color/primary3"
+            android:textFontWeight="800"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="video setiap hari"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:fontFamily="@font/fredoka_semibold"
+            android:layout_marginHorizontal="32dp"
+            android:textColor="@color/primary3"
+            android:visibility="gone"
+            android:layout_marginTop="32dp" />
+
+        <ImageView
+            android:id="@+id/onBoardingImageContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/image_onboarding2" />
+
+        <TextView
+            android:id="@+id/onBoardingDescription"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/fredoka_bold"
+            android:text="Selamat Datang!"
+            android:textAlignment="center"
+            android:textColor="#C8611D"
+            android:textSize="31sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="@style/Theme.IniDesakuBeta.Button."
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="35dp"
+            android:backgroundTint="@color/primary3"
+            android:text="Lanjut"
+            android:textAllCaps="false"
+            android:textColor="@color/accent1"
+            app:cornerRadius="5dp"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

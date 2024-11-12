@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/email"
+        android:textSize="16sp"
+        android:textColor="@color/accent1"
+        android:paddingStart="26sp"
+        android:layout_marginTop="32dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        android:paddingHorizontal="24dp"
+        app:boxCornerRadiusBottomEnd="8dp">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_layout"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_input_email"
+            android:textColorHint="@color/accent1"
+            android:textColor="@color/accent1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/email_has_used"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="@string/email_has_used"
+            android:textColor="@color/danger500"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:paddingLeft="30dp"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/email_format_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="@string/email_format_error"
+            android:textColor="@color/danger500"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:paddingLeft="30dp"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/email_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="@string/email_empty"
+            android:textColor="@color/danger500"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:paddingLeft="30dp"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/email_has_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="@string/email_has_space"
+            android:textColor="@color/danger500"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:paddingLeft="30dp"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/name"
+        android:textSize="16sp"
+        android:textColor="@color/accent1"
+        android:paddingStart="26sp"
+        android:layout_marginTop="2dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        android:paddingHorizontal="24dp"
+        app:boxCornerRadiusBottomEnd="8dp">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_layout"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:inputType="textPersonName"
+            android:hint="@string/hint_input_name"
+            android:textColorHint="@color/accent1"
+            android:textColor="@color/accent1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/username_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="@string/username_empty"
+            android:textColor="@color/danger500"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:paddingLeft="30dp"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/role"
+        android:textSize="16sp"
+        android:textColor="@color/accent1"
+        android:paddingStart="26sp"
+        android:layout_marginTop="4dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/peranLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        app:boxStrokeWidth="0dp"
+        app:hintEnabled="false"
+        app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinPeran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="none"
+            android:hint="@string/hint_select_role"
+            android:textColorHint="@color/accent1"
+            android:background="@drawable/input_layout"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            app:simpleItems="@array/role_items" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/role_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="@string/role_empty"
+            android:textColor="@color/danger500"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:paddingLeft="30dp"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/kata_sandi"
+        android:textSize="16sp"
+        android:textColor="@color/accent1"
+        android:paddingStart="26sp"
+        android:layout_marginTop="4dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/accent1"
+        android:paddingHorizontal="24dp">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textPassword"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/hint_input_password"
+            android:textColorHint="@color/accent1"
+            android:textColor="@color/accent1"
+            android:background="@drawable/input_layout"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_regular"
+        android:text="@string/password_wrong"
+        android:textColor="@color/danger500"
+        android:textSize="14sp"
+        android:alpha="0"
+        android:paddingLeft="30dp"
+        android:paddingTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
+
+<!--    <com.google.android.material.textview.MaterialTextView-->
+<!--        android:id="@+id/termConditionsText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/term_conditions_text"-->
+<!--        android:fontFamily="@font/fredoka_medium"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textFontWeight="500"-->
+<!--        android:textColor="@color/light4"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginEnd="0dp"-->
+<!--        android:layout_marginTop="20dp"/>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="-15dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="menyetujui"-->
+<!--            android:fontFamily="@font/fredoka_medium"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textFontWeight="500"-->
+<!--            android:textColor="@color/light4"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginEnd="0dp" />-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnTermConditions"-->
+<!--            style="@style/Widget.Material3.Button.TextButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/kebijakan_privasi_text"-->
+<!--            android:fontFamily="@font/fredoka_semibold"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="@color/primary3"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginStart="-8dp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="dari layanan kami"-->
+<!--            android:fontFamily="@font/fredoka_medium"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textFontWeight="500"-->
+<!--            android:textColor="@color/light4"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginStart="-8dp" />-->
+<!--    </LinearLayout>-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignUp"
+        style="@style/Theme.IniDesakuBeta.Button."
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        app:cornerRadius="5dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/primary3"
+        android:textColor="@color/accent1"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintEnd_toEndOf="@id/btnForgotPassword"
+        app:layout_constraintStart_toStartOf="@id/checkBoxRemember"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxRemember" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sudah_mempunya_akun"
+            android:fontFamily="@font/fredoka_regular"
+            android:textSize="16sp"
+            android:textColor="@color/accent1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginEnd="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoginPage"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:fontFamily="@font/fredoka_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/primary3"
+            android:gravity="center"
+            android:layout_marginStart="-8dp" />
+    </LinearLayout>
+
+</LinearLayout>

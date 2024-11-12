@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="role_items">
+        <item>Teacher</item>
+        <item>Admin</item>
+    </string-array>
+    <string-array name="video_list_items">
+        <item>@drawable/image_card_video_1</item>
+        <item>@drawable/image_card_video_2</item>
+    </string-array>
+    <string-array name="ebook_list_items">
+        <item>@drawable/image_card_ebook_1</item>
+        <item>@drawable/image_card_ebook_2</item>
+    </string-array>
+    <string-array name="tentang_sekolah_deskripsi">
+        <item>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dapibus sem, at viverra massa. Nam vitae quam vel ipsum sodales faucibus quis nec mauris
+        </item>
+        <item>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dapibus sem, at viverra massa. Nam vitae quam vel ipsum sodales faucibus quis nec mauris
+        </item>
+    </string-array>
+    <string-array name="onboarding_deskripsi">
+        <item>
+            Selamat Datang!
+        </item>
+        <item>
+            KesSekolah adalah pembelajaran kesehatan yang bisa diakses kapan pun dan di mana pun!
+        </item>
+    </string-array>
+</resources>

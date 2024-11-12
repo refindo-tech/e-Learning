@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.core.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bannerProfile"
+            android:layout_width="0dp"
+            android:layout_height="216dp"
+            android:background="?attr/colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btn_edit_profile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="76dp"
+                android:background="@color/grey"
+                android:src="@drawable/logo_app"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/customImageViewCircle" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/dummt_name"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Headline4Black"
+                app:layout_constraintEnd_toStartOf="@id/btn_edit_profile"
+                app:layout_constraintStart_toEndOf="@id/imgAvatar"
+                app:layout_constraintTop_toTopOf="@id/imgAvatar" />
+
+            <TextView
+                android:id="@+id/tvProfesi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_role"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Subtitle1Black"
+                app:layout_constraintEnd_toEndOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_email"
+                android:theme="@style/Theme.IniDesakuBeta.TextBold.Subtitle2Black"
+                app:layout_constraintEnd_toEndOf="@id/tvProfesi"
+                app:layout_constraintStart_toStartOf="@id/tvProfesi"
+                app:layout_constraintTop_toBottomOf="@id/tvProfesi" />
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/version_app"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Subtitle1Black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgBottomLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_app_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="-64dp"
+                android:layout_marginStart="-16dp"/>
+
+            <ImageView
+                android:id="@+id/imgTopRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_app_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="-69dp"
+                android:layout_marginTop="-90dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            android:text="@string/setting"
+            android:theme="@style/Theme.IniDesakuBeta.Text.Headline6Primary"
+            app:layout_constraintEnd_toEndOf="@id/bannerProfile"
+            app:layout_constraintStart_toStartOf="@id/bannerProfile"
+            app:layout_constraintTop_toBottomOf="@id/bannerProfile" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividertop"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProfile" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutDarkMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividertop">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dark_mode"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Headline6" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:id="@+id/btnDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerVerifikasiEmail"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutDarkMode"
+            app:layout_constraintStart_toStartOf="@id/layoutDarkMode"
+            app:layout_constraintEnd_toEndOf="@id/layoutDarkMode"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btnTentangSekolah"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dividerVerifikasiEmail"
+            app:layout_constraintTop_toBottomOf="@id/layoutDarkMode">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/tentang_sekolah"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Headline6" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerTentangSekolah"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/btnTentangSekolah"
+            app:layout_constraintStart_toStartOf="@id/btnTentangSekolah"
+            app:layout_constraintEnd_toEndOf="@id/btnTentangSekolah"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btnKeluar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="24dp"
+            android:layout_marginBottom="180dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerTentangSekolah">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_out"
+                android:textColor="@color/red"
+                android:theme="@style/Theme.IniDesakuBeta.Text.Headline6" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center|right"
+                android:src="@drawable/ic_log_out" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnKeluar"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+</ScrollView>

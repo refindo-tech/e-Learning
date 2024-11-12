@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.core.beranda.materi.detailMateri.DetailMateriFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
+            app:menu="@menu/nav_bar_bookmark"
+            app:title="Materi"
+            app:titleTextAppearance="@style/Theme.IniDesakuBeta.Text.NavbarTitlee"
+            app:titleCentered="true"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBanner"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:foregroundGravity="center_horizontal"
+        tools:listitem="@layout/banner_detail_materi"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toTopOf="@id/pdfView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.rajat.pdfviewer.PdfRendererView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:pdfView_divider="@drawable/pdf_viewer_divider"
+        app:pdfView_showDivider="false"
+        app:layout_constraintTop_toBottomOf="@id/rvBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/pdfView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

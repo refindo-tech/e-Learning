@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_video_title"
+        android:theme="@style/Theme.IniDesakuBeta.Text.Headline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutTitle"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="@string/masukan_judul_materi"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textJudulMateri"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvURL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_link_video"
+        android:theme="@style/Theme.IniDesakuBeta.Text.Headline6"
+        app:layout_constraintEnd_toEndOf="@id/layoutTitle"
+        app:layout_constraintStart_toStartOf="@id/layoutTitle"
+        app:layout_constraintTop_toBottomOf="@id/layoutTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutURL"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="@string/hint_url"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@id/tvURL"
+        app:layout_constraintStart_toStartOf="@id/tvURL"
+        app:layout_constraintTop_toBottomOf="@id/tvURL">
+
+        <com.example.kessekolah.ui.customView.CustomInputEditText
+            android:id="@+id/textURL"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvKategori"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/materi_category"
+        android:theme="@style/Theme.IniDesakuBeta.Text.Headline6"
+        app:layout_constraintEnd_toEndOf="@+id/layoutURL"
+        app:layout_constraintStart_toStartOf="@+id/layoutURL"
+        app:layout_constraintTop_toBottomOf="@+id/layoutURL" />
+
+    <HorizontalScrollView
+        android:id="@+id/Hz_scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:padding="8dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@+id/tvKategori"
+        app:layout_constraintStart_toStartOf="@+id/tvKategori"
+        app:layout_constraintTop_toBottomOf="@+id/tvKategori">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tvKategori"
+            app:layout_constraintStart_toStartOf="@+id/tvKategori"
+            app:layout_constraintTop_toBottomOf="@+id/tvKategori"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_1"
+                android:text="@string/ch_materi_1" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_2"
+                android:text="@string/ch_materi_2" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_3"
+                android:text="@string/ch_materi_3" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_4"
+                android:text="@string/ch_materi_4" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_5"
+                android:text="@string/ch_materi_5" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip6"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_6"
+                android:text="@string/ch_materi_6" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip7"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_7"
+                android:text="@string/ch_materi_7" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip8"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_8"
+                android:text="@string/ch_materi_8" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip9"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_9"
+                android:text="@string/ch_materi_9" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip10"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_10"
+                android:text="@string/ch_materi_10" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip11"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_11"
+                android:text="@string/ch_materi_11" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip12"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_12"
+                android:text="@string/ch_materi_12" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip13"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_13"
+                android:text="@string/ch_materi_13" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip14"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_14"
+                android:text="@string/ch_materi_14" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip15"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_15"
+                android:text="@string/ch_materi_15" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip16"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_16"
+                android:text="@string/ch_materi_16" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip17"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_17"
+                android:text="@string/ch_materi_17" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip18"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_18"
+                android:text="@string/ch_materi_18" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip19"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_19"
+                android:text="@string/ch_materi_19" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip20"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_20"
+                android:text="@string/ch_materi_20" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip21"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_21"
+                android:text="@string/ch_materi_21" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip22"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_22"
+                android:text="@string/ch_materi_22" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip23"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/ch_materi_23"
+                android:text="@string/ch_materi_23" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvPilihIlustrasi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/select_illustration"
+        android:theme="@style/Theme.IniDesakuBeta.Text.Headline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Hz_scroll_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIlus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:foregroundGravity="center"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPilihIlustrasi"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_banner_materi_picker" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
